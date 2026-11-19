@@ -13,7 +13,7 @@ V = {
 TPL = (root / "build.gradle.tpl").read_text()
 SET = (root / "settings.gradle.tpl").read_text()
 # Prefer an existing Fabric wrapper (already cached); fall back to copying our own later.
-wrapper_src = Path("/workspace/minecraft/bible-java/versions/26.3")
+wrapper_src = root / "versions/26.3"
 for mc, c in V.items():
     d = root / f"versions/{mc}"
     d.mkdir(parents=True, exist_ok=True)
