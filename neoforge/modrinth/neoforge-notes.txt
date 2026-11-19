@@ -1,1 +1,29 @@
-$file:/tmp/b/neoforge/modrinth/neoforge-notes.txt
+Jarry's Holy Bible - NeoForge files for the existing Modrinth project
+=====================================================================
+
+These jars belong on the same Modrinth listing as the Fabric builds
+("Jarry's Holy Bible"), not on a separate project.
+
+Loader: NeoForge (required on both client and server, same as the Fabric
+builds). Also requires a matching NeoForge install for the game version.
+
+Recommended Modrinth version names (one file per game version):
+
+  Version name          Game versions   Loader     File
+  --------------------  --------------  ---------  -------------------------------------------
+  1.0.0+26.3-neoforge   26.3            NeoForge   jarrys-holy-bible-neoforge-1.0.0+26.3.jar
+  1.0.0+26.2-neoforge   26.2            NeoForge   jarrys-holy-bible-neoforge-1.0.0+26.2.jar
+  1.0.0+26.1.2-neoforge 26.1.2          NeoForge   jarrys-holy-bible-neoforge-1.0.0+26.1.2.jar
+  1.0.0+1.21.11-neoforge 1.21.11        NeoForge   jarrys-holy-bible-neoforge-1.0.0+1.21.11.jar
+  1.0.0+1.21.10-neoforge 1.21.10        NeoForge   jarrys-holy-bible-neoforge-1.0.0+1.21.10.jar
+
+Feature parity with the Fabric 1.0.0 builds (same mod id jarrys_holy_bible
+and same item id jarrys_holy_bible:bible). The code is MIT; the King James
+Version text is in the public domain.
+
+NeoForge versions these were compiled against (all official stable releases):
+  26.3    -> NeoForge 26.3.0.113
+  26.2    -> NeoForge 26.2.0.95
+  26.1.2  -> NeoForge 26.1.2.127
+  1.21.11 -> NeoForge 21.11.48
+  1.21.10 -> NeoForge 21.10.64

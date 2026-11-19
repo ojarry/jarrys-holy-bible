@@ -1,1 +1,5 @@
-$file:/tmp/b/forge/settings.gradle.tpl
+plugins {
+	id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
+
+rootProject.name = 'jarrys-holy-bible-forge'

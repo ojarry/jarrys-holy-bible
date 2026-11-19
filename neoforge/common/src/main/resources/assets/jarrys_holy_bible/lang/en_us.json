@@ -1,1 +1,3 @@
-$file:/tmp/b/neoforge/common/src/main/resources/assets/jarrys_holy_bible/lang/en_us.json
+{
+	"item.jarrys_holy_bible.bible": "Holy Bible"
+}

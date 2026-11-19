@@ -1,1 +1,3 @@
-$file:/tmp/b/forge/common/src/main/resources/assets/jarrys_holy_bible/lang/en_us.json
+{
+	"item.jarrys_holy_bible.bible": "Holy Bible"
+}

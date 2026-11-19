@@ -1,1 +1,12 @@
-$file:/tmp/b/neoforge/shims/mc26_3/resources/data/jarrys_holy_bible/loot_table/chests/bible.json
+{
+	"type": "minecraft:chest",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{ "type": "minecraft:item", "name": "jarrys_holy_bible:bible" }
+			],
+			"condition": { "type": "minecraft:random_chance", "chance": 0.001 }
+		}
+	]
+}

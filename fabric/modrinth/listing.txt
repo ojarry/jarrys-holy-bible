@@ -1,1 +1,18 @@
-$file:/tmp/b/fabric/modrinth/listing.txt
+Project name: Jarry's Holy Bible
+Slug: jarrys-holy-bible
+Project type: Mod
+Loader: Fabric (requires Fabric API)
+Client/server: Required on both client and server
+License: MIT (code). KJV text: public domain.
+Categories: Utility, Adventure (Modrinth tags "utility" and "adventure")
+Versions to upload (one file each):
+  1.0.0+26.3     -> Minecraft 26.3       file jarrys-holy-bible-1.0.0+26.3.jar
+  1.0.0+26.2     -> Minecraft 26.2       file jarrys-holy-bible-1.0.0+26.2.jar
+  1.0.0+26.1.2   -> Minecraft 26.1.2     file jarrys-holy-bible-1.0.0+26.1.2.jar
+  1.0.0+1.21.11  -> Minecraft 1.21.11    file jarrys-holy-bible-1.0.0+1.21.11.jar
+  1.0.0+1.21.10  -> Minecraft 1.21.10    file jarrys-holy-bible-1.0.0+1.21.10.jar
+Release channel: Beta until tested in-game, then Release
+Dependency: Fabric API (required)
+Icon: icon-512.png
+Description: description.md
+Changelog per version: changelog.md

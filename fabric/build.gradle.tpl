@@ -1,1 +1,59 @@
-$file:/tmp/b/fabric/build.gradle.tpl
+plugins {
+	id '@PLUGIN@' version "${loom_version}"
+}
+
+version = "${project.mod_version}+${project.minecraft_version}"
+group = project.maven_group
+base { archivesName = 'jarrys-holy-bible' }
+
+def common = file('../../common')
+
+sourceSets {
+	main {
+		java.srcDirs = [file("${common}/src/main/java"), file('src/main/java')]
+		resources.srcDirs = [file("${common}/src/main/resources"), file('build/generated/bible')]
+	}
+	test {
+		java.srcDirs = [file("${common}/src/test/java")]
+	}
+}
+
+loom {
+	splitEnvironmentSourceSets()
+	sourceSets.client.java.srcDirs = [file("${common}/src/client/java"), file('src/client/java')]
+	mods {
+		"jarrys_holy_bible" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+	runs {
+		server { runDir = 'run-server'; programArgs '--nogui' ; vmArg '-Djarrys_holy_bible.selftest=true' }
+		client { runDir = 'run-client'; vmArg '-Djarrys_holy_bible.clientselftest=true'; vmArg '-Xmx2G'; programArgs '--quickPlaySingleplayer', 'smoke' }
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	@MAPPINGS@
+	@IMPL@ "net.fabricmc:fabric-loader:${project.loader_version}"
+	@IMPL@ "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	testImplementation platform('org.junit:junit-bom:5.11.4')
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test { useJUnitPlatform(); systemProperty 'bible.root', file("${common}/../build-data").absolutePath }
+
+processResources {
+	def props = [version: project.version, mc_dep: project.mc_dep, java_min: project.java_min]
+	inputs.properties props
+	filesMatching("fabric.mod.json") { expand props }
+}
+
+tasks.withType(JavaCompile).configureEach { it.options.release = @JAVA@; it.options.encoding = 'UTF-8'; it.options.compilerArgs << '-Xlint:deprecation' }
+java {
+	sourceCompatibility = JavaVersion.toVersion(@JAVA@)
+	targetCompatibility = JavaVersion.toVersion(@JAVA@)
+}
+jar { from(file("${common}/LICENSE")) }

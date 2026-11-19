@@ -1,1 +1,7 @@
-$file:/tmp/b/forge/shims/mc1_21_10/resources/pack.mcmeta
+{
+  "pack": {
+    "description": "Jarry's Holy Bible resources",
+    "max_format": 88,
+    "min_format": 88
+  }
+}

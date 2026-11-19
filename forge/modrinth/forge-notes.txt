@@ -1,1 +1,25 @@
-$file:/tmp/b/forge/modrinth/forge-notes.txt
+Jarry's Holy Bible - Forge files for the existing Modrinth project
+==================================================================
+
+These jars belong on the same Modrinth listing as the Fabric and
+NeoForge builds ("Jarry's Holy Bible"), not on a separate project.
+
+Loader: Forge (MinecraftForge, not NeoForge). Required on both the client
+and the server, same as the other loaders. Also requires a matching Forge
+install for the game version.
+
+Recommended Modrinth version names (one file per game version):
+
+  Version name            Game versions   Loader  File
+  ----------------------  --------------  ------  ----------------------------------------
+  1.0.0+1.21.11-forge     1.21.11         Forge   jarrys-holy-bible-forge-1.0.0+1.21.11.jar
+  1.0.0+1.21.10-forge     1.21.10         Forge   jarrys-holy-bible-forge-1.0.0+1.21.10.jar
+
+Feature parity with the Fabric and NeoForge 1.0.0 builds (same mod id
+jarrys_holy_bible and same item id jarrys_holy_bible:bible). The code is
+MIT; the King James Version text is in the public domain.
+
+Forge versions these were compiled against (official stable releases,
+verified on maven.minecraftforge.net):
+  1.21.11 -> Forge 61.2.5
+  1.21.10 -> Forge 60.1.18

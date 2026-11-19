@@ -1,1 +1,8 @@
-$file:/tmp/b/neoforge/common/src/main/resources/data/jarrys_holy_bible/advancement/recipes/tools/bible.json
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_book": { "trigger": "minecraft:inventory_changed", "conditions": { "items": [ { "items": "minecraft:book" } ] } }
+	},
+	"requirements": [["has_book"]],
+	"rewards": { "recipes": ["jarrys_holy_bible:bible"] }
+}

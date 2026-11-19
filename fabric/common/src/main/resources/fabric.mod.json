@@ -1,1 +1,21 @@
-$file:/tmp/b/fabric/common/src/main/resources/fabric.mod.json
+{
+	"schemaVersion": 1,
+	"id": "jarrys_holy_bible",
+	"version": "${version}",
+	"name": "Jarry's Holy Bible",
+	"description": "A Holy Bible item with the complete King James Version: read it by Testament, Book and Chapter. Rare in village chests, crafted from a book and a gold ingot, and given to every player once on first join.",
+	"authors": ["Jarry"],
+	"license": "MIT",
+	"icon": "assets/jarrys_holy_bible/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["net.jarry.holybible.HolyBible"],
+		"client": ["net.jarry.holybible.client.HolyBibleClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.17.0",
+		"minecraft": "${mc_dep}",
+		"java": ">=${java_min}",
+		"fabric-api": "*"
+	}
+}

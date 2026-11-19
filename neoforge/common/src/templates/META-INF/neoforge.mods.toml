@@ -1,1 +1,26 @@
-$file:/tmp/b/neoforge/common/src/templates/META-INF/neoforge.mods.toml
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+authors="Jarry"
+logoFile="assets/jarrys_holy_bible/icon.png"
+iconFile="assets/jarrys_holy_bible/icon.png"
+description='''
+A Holy Bible item with the complete King James Version: read it by Testament, Book and Chapter. Rare in village chests, crafted from a book and a gold ingot, and given to every player once on first join.
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"

@@ -1,1 +1,6 @@
-$file:/tmp/b/forge/shims/mc1_21_11/resources/data/forge/loot_modifiers/global_loot_modifiers.json
+{
+	"replace": false,
+	"entries": [
+		"jarrys_holy_bible:add_bible_to_village_chests"
+	]
+}

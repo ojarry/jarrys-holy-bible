@@ -1,1 +1,5 @@
-$file:/tmp/b/neoforge/common/src/main/resources/data/jarrys_holy_bible/recipe/bible.json
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": ["minecraft:book", "minecraft:gold_ingot"],
+	"result": { "id": "jarrys_holy_bible:bible" }
+}

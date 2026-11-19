@@ -1,1 +1,7 @@
-$file:/tmp/b/forge/versions/1.21.11/src/main/resources/pack.mcmeta
+{
+  "pack": {
+    "description": "Jarry's Holy Bible resources",
+    "max_format": 94,
+    "min_format": [94, 1]
+  }
+}

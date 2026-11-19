@@ -1,1 +1,4 @@
-$file:/tmp/b/neoforge/common/src/main/resources/assets/jarrys_holy_bible/models/item/bible.json
+{
+	"parent": "minecraft:item/generated",
+	"textures": { "layer0": "jarrys_holy_bible:item/bible" }
+}

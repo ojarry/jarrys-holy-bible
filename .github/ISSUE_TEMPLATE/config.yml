@@ -1,1 +1,5 @@
-$file:/tmp/b/.github/ISSUE_TEMPLATE/config.yml
+blank_issues_enabled: true
+contact_links:
+  - name: Questions and support
+    url: https://github.com/ojarry/jarrys-holy-bible/discussions
+    about: Ask for help or discuss the mod in GitHub Discussions

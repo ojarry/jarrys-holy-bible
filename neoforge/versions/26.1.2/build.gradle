@@ -1,1 +1,105 @@
-$file:/tmp/b/neoforge/versions/26.1.2/build.gradle
+plugins {
+	id 'java-library'
+	id 'net.neoforged.moddev' version '2.0.148'
+}
+
+version = "${mod_version}+${minecraft_version}"
+group = maven_group
+base { archivesName = 'jarrys-holy-bible-neoforge' }
+
+def common = file('../../common')
+
+sourceSets {
+	main {
+		java.srcDirs = [
+			file("${common}/src/main/java"),
+			file("${common}/src/client/java"),
+			file('src/main/java'),
+			file('src/client/java')
+		]
+		resources.srcDirs = [
+			file("${common}/src/main/resources"),
+			file('src/main/resources')
+		]
+	}
+	test {
+		java.srcDirs = [file("${common}/src/test/java")]
+	}
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+neoForge {
+	version = project.neo_version
+	runs {
+		client {
+			client()
+			gameDirectory = project.file('run-client')
+			systemProperty 'jarrys_holy_bible.clientselftest', 'true'
+			jvmArguments.add('-Xmx2G')
+			programArguments.addAll('--quickPlaySingleplayer', 'smoke')
+		}
+		server {
+			server()
+			gameDirectory = project.file('run-server')
+			programArgument '--nogui'
+			systemProperty 'jarrys_holy_bible.selftest', 'true'
+		}
+	}
+	mods {
+		jarrys_holy_bible {
+			sourceSet sourceSets.main
+		}
+	}
+	unitTest {
+		enable()
+		testedMod = mods.jarrys_holy_bible
+	}
+}
+
+dependencies {
+	testImplementation platform('org.junit:junit-bom:5.11.4')
+	testImplementation 'org.junit.jupiter:junit-jupiter'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test { useJUnitPlatform() }
+
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+	var replaceProperties = [
+		minecraft_version      : minecraft_version,
+		minecraft_version_range: minecraft_version_range,
+		neo_version            : neo_version,
+		mod_id                 : 'jarrys_holy_bible',
+		mod_name               : "Jarry's Holy Bible",
+		mod_license            : 'MIT',
+		mod_version            : project.version
+	]
+	inputs.properties replaceProperties
+	expand replaceProperties
+	from "${common}/src/templates"
+	into "build/generated/sources/modMetadata"
+}
+sourceSets.main.resources.srcDir generateModMetadata
+neoForge.ideSyncTask generateModMetadata
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = 'UTF-8'
+	it.options.compilerArgs << '-Xlint:deprecation'
+}
+
+jar {
+	from(file("${common}/LICENSE")) {
+		rename { 'LICENSE.txt' }
+	}
+}
+
+tasks.named('build') {
+	doLast {
+		copy {
+			from tasks.named('jar', Jar)
+			into file('../../dist')
+		}
+	}
+}
