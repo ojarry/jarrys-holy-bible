@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/shims/mc26/client/net/jarry/holybible/client/compat/ClientPlatform.java

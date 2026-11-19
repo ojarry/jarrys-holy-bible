@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/common/src/test/java/net/jarry/holybible/ResourcesTest.java

@@ -1,0 +1,1 @@
+$file:/tmp/b/neoforge/shims/mc1_21_10/client/net/jarry/holybible/client/compat/ClientPlatform.java

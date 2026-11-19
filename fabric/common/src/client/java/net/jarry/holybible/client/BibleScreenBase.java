@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/common/src/client/java/net/jarry/holybible/client/BibleScreenBase.java

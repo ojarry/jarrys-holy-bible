@@ -1,0 +1,1 @@
+$file:/tmp/b/neoforge/build_all.sh

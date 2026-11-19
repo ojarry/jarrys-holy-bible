@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/build.gradle.tpl

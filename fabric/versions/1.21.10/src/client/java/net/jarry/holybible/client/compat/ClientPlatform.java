@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/versions/1.21.10/src/client/java/net/jarry/holybible/client/compat/ClientPlatform.java

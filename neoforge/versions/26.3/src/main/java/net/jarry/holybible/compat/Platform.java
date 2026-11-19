@@ -1,0 +1,1 @@
+$file:/tmp/b/neoforge/versions/26.3/src/main/java/net/jarry/holybible/compat/Platform.java

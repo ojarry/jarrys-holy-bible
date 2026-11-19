@@ -1,0 +1,1 @@
+$file:/tmp/b/neoforge/client_smoke.sh

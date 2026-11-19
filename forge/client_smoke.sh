@@ -1,0 +1,1 @@
+$file:/tmp/b/forge/client_smoke.sh

@@ -1,0 +1,1 @@
+$file:/tmp/b/forge/common/src/main/java/net/jarry/holybible/SelfTest.java

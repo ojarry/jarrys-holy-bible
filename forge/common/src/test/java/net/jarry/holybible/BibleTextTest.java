@@ -1,0 +1,1 @@
+$file:/tmp/b/forge/common/src/test/java/net/jarry/holybible/BibleTextTest.java

@@ -1,0 +1,1 @@
+$file:/tmp/b/fabric/client_smoke.sh

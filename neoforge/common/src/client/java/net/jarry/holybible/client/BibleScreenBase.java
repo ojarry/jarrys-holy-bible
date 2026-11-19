@@ -1,0 +1,1 @@
+$file:/tmp/b/neoforge/common/src/client/java/net/jarry/holybible/client/BibleScreenBase.java
